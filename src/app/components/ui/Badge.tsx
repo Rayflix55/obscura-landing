@@ -1,7 +1,7 @@
 // src/components/ui/Badge.tsx
 import { cn } from "../../lib/cn";
 
-export type BadgeKind = "NEW" | "REFURBISHED" | "LIMITED";
+export type BadgeKind = "NEW" | "REFURBISHED" | "LIMITED" | "BESTSELLER";
 
 export function Badge({
   kind,

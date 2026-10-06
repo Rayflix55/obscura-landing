@@ -1,13 +1,29 @@
-// src/lib/data.ts
+// src/app/lib/data.ts
+
+/* ────────────────────────────  TYPES  ──────────────────────────── */
+
+export type ProductBadge = "NEW" | "REFURBISHED" | "LIMITED" | "BESTSELLER";
+
+export interface Product {
+  id: string;
+  name: string;
+  specs: string;      // "45MP · f/1.4 · Full frame"
+  price: number;
+  image: string;
+  badge?: ProductBadge;
+}
+
 export interface Category {
   id: string;
-  index: string;   // "01", "02", "03"
-  label: string;   // "Bodies"
-  title: string;   // "Mirrorless Cameras"
-  ctaLabel: string;// "Browse bodies"
+  index: string;      // "01", "02", "03"
+  label: string;      // "Bodies"
+  title: string;      // "Mirrorless Cameras"
+  ctaLabel: string;   // "Browse bodies"
   href: string;
   image: string;
 }
+
+/* ───────────────────────────  CATEGORIES  ──────────────────────── */
 
 export const categories: Category[] = [
   {
@@ -38,16 +54,8 @@ export const categories: Category[] = [
     image: "/category-field-kit.png",
   },
 ];
-export type ProductBadge = "NEW" | "REFURBISHED" | "LIMITED";
 
-export interface Product {
-  id: string;
-  name: string;
-  specs: string;      // "45MP · f/1.4 · Full frame"
-  price: number;
-  image: string;
-  badge?: ProductBadge;
-}
+/* ─────────────────────────  FEATURED GEAR  ─────────────────────── */
 
 export const featuredProducts: Product[] = [
   {
@@ -55,7 +63,7 @@ export const featuredProducts: Product[] = [
     name: "Nova X1 Mirrorless",
     specs: "45MP · f/1.4 · Full frame",
     price: 2349,
-    image: "/hero.png", // TODO: /products/nova-x1.png
+    image: "/products/nova-x1.png",
     badge: "NEW",
   },
   {
@@ -63,27 +71,32 @@ export const featuredProducts: Product[] = [
     name: "Meridian 50mm Prime",
     specs: "f/1.8 · Manual focus",
     price: 649,
-    image: "/hero.png", // TODO: /products/meridian-50.png
-    badge: "REFURBISHED",
+    image: "/products/meridian-50.png",
+    badge: "BESTSELLER",
   },
   {
     id: "halycon-tripod",
     name: "Halycon Carbon Tripod",
     specs: "1.2kg · 165cm max height",
     price: 258,
-    image: "/hero.png", // TODO: /products/halycon-tripod.png
+    image: "/products/halycon-tripod.png",
   },
   {
     id: "everline-bag",
     name: "Everline Field Bag",
     specs: "Canvas & full-grain leather",
     price: 169,
-    image: "/hero.png", // TODO: /products/everline-bag.png
+    image: "/products/everline-bag.png",
     badge: "LIMITED",
   },
 ];
 
-// Currency helper — keeps formatting consistent across the app
+/* ─────────────────────────  ABOUT / SEO  ───────────────────────── */
+
+export const aboutImage = "/about-workshop.png";
+
+/* ────────────────────────────  UTILS  ──────────────────────────── */
+
 export const formatPrice = (n: number) =>
   new Intl.NumberFormat("en-US", {
     style: "currency",
