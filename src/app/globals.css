@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Colors ---- */
+  --color-bg: #101012;
+  --color-surface: #18181b;
+  --color-surface-alt: #1f1f23;
+  --color-footer: #0b0b0c;
+
+  --color-text: #f3f1ea;
+  --color-muted: #9c9a93;
+  --color-placeholder: #757575;
+
+  --color-primary: #1a7431;
+  --color-primary-hover: #155d27;
+
+  --color-divider: rgba(242, 240, 233, 0.12);
+
+  /* ---- Fonts ---- */
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  /* ---- Radii (from Figma) ---- */
+  --radius-card: 2px;
+  --radius-icon: 8px;
+
+  /* ---- Motion ---- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-text);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+}
+@layer utilities {
+  /* Slow, subtle pulse for the footer wordmark */
+@keyframes wordmark-pulse {
+  0%, 100% { opacity: 0.65; }
+  50%      { opacity: 1; }
+}
+.animate-wordmark-pulse {
+  animation: wordmark-pulse 7s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-wordmark-pulse { animation: none; opacity: 1; }
+}
+}
