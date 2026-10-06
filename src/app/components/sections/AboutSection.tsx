@@ -11,15 +11,10 @@ export function AboutSection() {
         <div className="flex flex-col lg:flex-row lg:items-start
                         gap-10 lg:gap-[69px]">
 
-          {/* ── Left column — text ──
-              Mobile: full width.
-              Desktop: flex-1 (fills remaining space after 558px image). */}
+          {/* ── Left column — text ── */}
           <div className="flex-1 min-w-0 flex flex-col gap-8 lg:gap-[30px] w-full">
-            {/* Header block — 5px gap between eyebrow and heading */}
             <div className="flex flex-col gap-[5px]">
               <Eyebrow>Why photographers choose us</Eyebrow>
-              {/* H2 — mobile: 28px, sm: 32px, lg: 40px.
-                  The <br> only shows on lg so mobile wraps naturally. */}
               <h2 className="font-display font-normal text-text
                              text-[28px] leading-[1.2] tracking-[-0.416px]
                              sm:text-[32px]
@@ -29,7 +24,6 @@ export function AboutSection() {
               </h2>
             </div>
 
-            {/* Body block — 20px gap on mobile, 24px on desktop */}
             <div className="flex flex-col gap-5 lg:gap-6">
               <p className="font-sans text-base leading-6 text-muted">
                 Every body and lens in the Obscura catalogue is chosen by
@@ -54,7 +48,6 @@ export function AboutSection() {
                 technician a question than search a forum for an answer.
               </p>
 
-              {/* Ghost CTA — full-width on mobile, content-width from sm up */}
               <Link
                 href="/story"
                 className="inline-flex items-center justify-center gap-[10px]
@@ -71,18 +64,17 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* ── Right column — image ──
-              Mobile: full width, shorter aspect (375:300) so it doesn't
-              dominate. Desktop: fixed 558px, aspect 558:420. */}
+          {/* ── Right column — image ── */}
           <div className="w-full lg:w-[558px] lg:shrink-0">
             <div className="relative aspect-[375/300] lg:aspect-[558/420]
                             w-full overflow-hidden
                             border border-divider rounded-[2px]">
               <Image
-                src="/img-1.png"
+                src="/about-workshop.png"
                 alt="Photographer inspecting camera equipment in a workshop"
                 fill
                 sizes="(min-width: 1024px) 558px, 100vw"
+                quality={90}
                 className="object-cover"
               />
             </div>
