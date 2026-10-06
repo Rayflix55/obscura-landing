@@ -8,6 +8,10 @@ import {
 } from "../ui/SocialIcons";
 import { ObscuraWordmark } from "../ui/ObscuraWordmark";
 
+// Evaluate once at module scope (build time) — Next.js 16 blocks `new Date()`
+// inside Client Component render during prerender, so we hoist it here.
+const CURRENT_YEAR = new Date().getFullYear();
+
 const SHOP_LINKS = [
   { label: "Cameras", href: "/cameras" },
   { label: "Lenses", href: "/lenses" },
@@ -166,7 +170,7 @@ export function Footer() {
                           pt-6 md:pt-8 border-t border-divider">
             <p className="font-mono text-[11px] sm:text-xs uppercase
                           tracking-[1.613px] text-muted">
-              © {new Date().getFullYear()} Obscura Camera Co. All rights reserved.
+              © {CURRENT_YEAR} Obscura Camera Co. All rights reserved.
             </p>
 
             {/* Legal links — 2 rows on mobile if needed */}
