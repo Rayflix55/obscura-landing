@@ -70,7 +70,7 @@ export function AboutSection() {
                             w-full overflow-hidden
                             border border-divider rounded-[2px]">
               <Image
-                src="/about-workshop.png"
+                src="/about-workshop.jpg"
                 alt="Photographer inspecting camera equipment in a workshop"
                 fill
                 sizes="(min-width: 1024px) 558px, 100vw"
