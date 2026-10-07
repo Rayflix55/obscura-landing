@@ -94,7 +94,7 @@ export function Hero() {
                             w-full overflow-hidden
                             border border-divider lg:border-0 rounded-[2px] lg:rounded-none">
               <Image
-                src="/img-1.png"
+                src="/img-1.jpeg"
                 alt="Photographer holding a mirrorless camera up to eye level"
                 fill
                 priority

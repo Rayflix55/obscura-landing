@@ -33,7 +33,7 @@ export const categories: Category[] = [
     title: "Mirrorless Cameras",
     ctaLabel: "Browse bodies",
     href: "/cameras",
-    image: "/category-bodies.png",
+    image: "/category-bodies.jpeg",
   },
   {
     id: "optics",
@@ -42,7 +42,7 @@ export const categories: Category[] = [
     title: "Prime & Zoom Lenses",
     ctaLabel: "Browse lenses",
     href: "/lenses",
-    image: "/category-optics.png",
+    image: "/category-optics.jpeg",
   },
   {
     id: "field-kit",
@@ -51,7 +51,7 @@ export const categories: Category[] = [
     title: "Bags, Light & Tripods",
     ctaLabel: "Browse accessories",
     href: "/accessories",
-    image: "/category-field-kit.png",
+    image: "/category-field-kit.jpeg",
   },
 ];
 
@@ -63,7 +63,7 @@ export const featuredProducts: Product[] = [
     name: "Nova X1 Mirrorless",
     specs: "45MP · f/1.4 · Full frame",
     price: 2349,
-    image: "/products/nova-x1.png",
+    image: "/products/nova-x1.jpeg",
     badge: "NEW",
   },
   {
@@ -71,7 +71,7 @@ export const featuredProducts: Product[] = [
     name: "Meridian 50mm Prime",
     specs: "f/1.8 · Manual focus",
     price: 649,
-    image: "/products/meridian-50.png",
+    image: "/products/meridian-50.jpeg",
     badge: "BESTSELLER",
   },
   {
@@ -79,21 +79,21 @@ export const featuredProducts: Product[] = [
     name: "Halycon Carbon Tripod",
     specs: "1.2kg · 165cm max height",
     price: 258,
-    image: "/products/halycon-tripod.png",
+    image: "/products/halycon-tripod.jpeg",
   },
   {
     id: "everline-bag",
     name: "Everline Field Bag",
     specs: "Canvas & full-grain leather",
     price: 169,
-    image: "/products/everline-bag.png",
+    image: "/products/everline-bag.jpeg",
     badge: "LIMITED",
   },
 ];
 
 /* ─────────────────────────  ABOUT / SEO  ───────────────────────── */
 
-export const aboutImage = "/about-workshop.png";
+export const aboutImage = "/about-workshop.jpeg";
 
 /* ────────────────────────────  UTILS  ──────────────────────────── */
 
